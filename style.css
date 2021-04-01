@@ -1,5 +1,5 @@
 /* Basic Style */
-body {
+.body {
   background-color: #f8f8f8;
   color: #333;
   font-family: Lato, sans-serif;
@@ -14,9 +14,10 @@ body {
 
 .header__img {
   width: 100%;
+  display: block;
 }
 
-.header__more-inf {
+.header__more-info {
   font-family: fantasy, cursive;
 }
 
@@ -34,33 +35,33 @@ body {
   margin: 0 auto 0;
 }
 
-.task {
+.app__task {
   width: 56%;
   display: inline-block;
   flex-grow: 1;
 }
 
-.task-row-wrapper {
-  padding-top: 20px;
-  display: flex;
+.app_add-item {
+  padding: 16px 0;
 }
 
-ul {
+.app__list {
   margin: 0;
-  padding: 0px;
+  padding: 0;
 }
 
-li, 
-h3 {
+.app__list-item,
+.app__title {
   list-style: none;
 }
 
-input,
-button{
+.app__input_text,
+.app__input_checkbox,
+.app__btn{
   outline: none;
 }
 
-.button {
+.app__btn {
   background: none;
   border: 0px;
   color: #888;
@@ -68,9 +69,10 @@ button{
   width: 60px;
   font-family: Lato, sans-serif;
   cursor: pointer;
+  padding-right: 26px;
 }
 
-.button:hover {
+.app__btn:hover {
   color: #3a3a3a;
 }
 
@@ -110,7 +112,7 @@ button{
 }
 
 #new-task {
-  width: 318px;
+  width: 80%;
 }
 
 .app_add-item > .app__btn:hover {
@@ -144,7 +146,8 @@ button{
 }
 
 .app__input_text {
-  width: 226px;
+  /* width: 226px; */
+  flex-grow: 1;
 }
 
 .app__list-item > .app__btn_delete:hover {

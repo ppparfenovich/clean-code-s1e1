@@ -35,7 +35,7 @@ var createNewTaskElement = function(taskString) {
     //button.delete
   var deleteButton = document.createElement("button");//delete button
   var deleteButtonImg = document.createElement("img");//delete button image
-  deleteButtonImg.classList.add("app__btn_delete__icon");
+  deleteButtonImg.classList.add("app__btn_icon");
 
   label.innerText = taskString;
   label.className = "app__task app__task_name";
@@ -47,7 +47,6 @@ var createNewTaskElement = function(taskString) {
   editButton.innerText = "Edit"; //innerText encodes special characters, HTML does not.
   editButton.className = "app__btn app__btn_edit";
 
-  deleteButton.innerText = "Delete";
   deleteButton.className = "app__btn app__btn_delete";
   deleteButtonImg.src = "./remove.svg";
   deleteButton.appendChild(deleteButtonImg);

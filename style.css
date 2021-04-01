@@ -16,7 +16,7 @@ body {
   width: 100%;
 }
 
-.header .more-inf {
+.header__more-inf {
   font-family: fantasy, cursive;
 }
 
@@ -41,6 +41,7 @@ body {
 }
 
 .task-row-wrapper {
+  padding-top: 20px;
   display: flex;
 }
 
@@ -74,7 +75,7 @@ button{
 }
 
 /* Heading */
-.main-row__title {
+.app__title {
   color: #333;
   font-weight: 700;
   font-size: 15px;
@@ -84,7 +85,7 @@ button{
   text-transform: uppercase;
 }
 
-input[type="text"] {
+.app__input_text {
   margin: 0;
   font-size: 18px;
   line-height: 18px;
@@ -97,12 +98,13 @@ input[type="text"] {
   color: #888;
 }
 
-input[type="text"]:focus {
+.app__input_text:focus {
   color: #333;
 }
 
 /* New Task */
-label[for="new-task"] {
+
+.app_add-item .app__title {
   display: block;
   margin: 0 0 20px;
 }
@@ -111,12 +113,12 @@ label[for="new-task"] {
   width: 318px;
 }
 
-p > button:hover {
+.app_add-item > .app__btn:hover {
   color: #0fc57c;
 }
 
 /* Task list */
-li {
+.app__list-item {
   overflow: hidden;
   padding: 20px 0;
   border-bottom: 1px solid #eee;
@@ -126,55 +128,55 @@ li {
   align-items: center;
 }
 
-li > * {
+.app__list-item > * {
   vertical-align: middle;
 }
 
-li > input[type="checkbox"] {
+.app__list-item > .app__input_checkbox {
   margin: 0 10px;
 }
 
-li > label {
+.app__list-item > .app__task_name {
   padding-left: 10px;
   box-sizing: border-box;
   font-size: 18px;
   width: 226px;
 }
 
-li > input[type="text"] {
+.app__input_text {
   width: 226px;
 }
 
-li > .del:hover {
+.app__list-item > .app__btn_delete:hover {
   color: #cf2323;
 }
 
-.del img {
+.app__btn_delete .app__btn_icon {
   height: 2em;
   transform: rotateZ(45deg);
   transition: transform 200ms ease-in;
 }
 
-.del img:hover {
+.app__btn_delete .app__btn_icon:hover {
   transform: rotateZ(0);
 }
 
 /* Completed */
-#completed-tasks .task {
+#completed .app__task {
   text-decoration: line-through;
   color: #888;
 }
 
 /* Edit Task */
-ul li input[type="text"] {
+.app__list .app__input_text {
   display: none;
 }
 
-.edit-mode input[type="text"] {
+.app__edit-mode .app__input_text {
   display: inline-block;
   width: 224px;
 }
 
-.edit-mode label {
+.app__edit-mode .app__task_name {
   display: none;
 }
